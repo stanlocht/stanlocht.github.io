@@ -20,6 +20,8 @@ body{
 
 }
 
+
+
 h2,.white{
     color: #4e4b74a9;
 }
@@ -28,6 +30,13 @@ a{
     color: #7A7C80;
     text-decoration: none;
 }
+
+.mirror{ 
+    position:absolute;
+    transform: rotate(360deg) scaleX(-1);
+    display: inline-block;
+  }
+
 /* section 1 */
 .section-1{
     padding-top: 40vh;
@@ -50,15 +59,14 @@ a{
     padding: 10px;
 }
 /* section 2 */
-.section-2{
+/* .section-2{
     padding-top: 10vh;
     width: 70%;
-}
+} */
 
 .section-2 h2{
     font-size: 1.7rem;
     margin-bottom: 10px;
-    margin-top:90px;
 }
 .section-2 h2 a{
     font-size: 1.7rem;
