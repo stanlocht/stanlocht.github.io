@@ -1,0 +1,54 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+  background: rgb(165, 222, 248);
+  position: relative;
+  background-image: url(imgs/hills.png);
+  background-repeat: repeat-x;
+  background-position: center;
+  background-size: auto 100vh;
+
+}
+  
+
+.main-header {
+    background-image: url(imgs/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100vh;
+    width: 422vh;
+    height:100vh;  /* responsive height */
+}
+
+
+.laptop {
+    background-color: rgba(255, 0, 0, 0);
+    position: relative;
+    width: 2%;
+    height: 6%;
+    top: 69%;
+    left: 28%;
+    cursor: pointer;
+}
+
+.blokje {
+  background-color: rgba(255, 0, 0, 0.4);
+  position: relative;
+  width: 10vh;
+  height: 10vh;
+  top: 40%;
+  left: 10%;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 0.1vh;
+  background-image: url(imgs/zeekoe.jpg);
+  background-size: contain;
+}
+
+.modal-content {
+  background-color: rgba(207, 191, 99, 0.952) !important;
+  border-radius: 25px !important;
+}
+

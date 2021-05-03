@@ -1,128 +1,205 @@
-/* global */
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
-.grid-2{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+body {
+  color: #FFFFFB;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
-.grid-3{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-
-body{
-    margin: 0;
-    padding: 0;
-    font-family:courier, courier new, serif;
-    background-color: #eee2b9;
-    color: #7A7C80;
-
+section {
+  padding: 0 0;
+  height: 100vh; 
 }
 
 
-
-h2,.white{
-    color: #7A7C80;
-}
-
-a{
-    color: #7A7C80;
-    text-decoration: none;
-}
-
-.mirror{ 
-    position:absolute;
-    transform: rotate(360deg) scaleX(-1);
-    display: inline-block;
-  }
-
-/* section 1 */
-.section-1{
-    padding-top: 40vh;
-    text-align: center;
-}
-
-.section-1 p{
-    font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
-}
-
-.section-1 h2{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-}
-
-.section-1 a{
-    font-size: 1.5rem;
-    padding: 10px;
-}
-/* section 2 */
-/* .section-2{
-    padding-top: 10vh;
-    width: 70%;
-} */
-
-.section-2 h2{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-}
-.section-2 h2 a{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.section-2 p{
-    font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
-}
-
-.section-2 a{
-    display: block;
-    padding: 5px;
-    font-size: 1.2rem;
-    padding-left: 0;
-    width: 100px;
-}
-/* animations / utilities */
-.section-2 a:hover{
-    font-size: 1.2rem;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.section-2 h2 a:hover{
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.section-1 a:hover{
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.white:hover{
+.hill {
+    height: 100vh;
+    width:auto;
+    background: rgb(165, 222, 248);
     position: relative;
-    padding-left: 10px;
+    background-image: url(imgs/hills.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100vh;
+
 }
 
-/* media queres */
-@media(max-width:780px){
-    .grid-2{
-        grid-template-columns: 1fr;
-    }
-    .section-1{
-        padding:0;
-        padding-top: 5rem;
-    }
-    .section-2{
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
-    }
+.house {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  zoom: 2;
+}
+
+.smoke1 {
+  display: none;
+  position: relative;
+  width: 50;
+  height: 100;
+  bottom: 187;
+  left: 102;
+  transform: rotate(25deg);
+
+  margin: 0 auto;
+  background-image: url(imgs/smoke.png);
+  background-size: 35 80;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.smoke2 {
+  display: none;
+  position: relative;
+  width: 40;
+  height: 80;
+  bottom: 190;
+  left: 72;
+  transform: rotate(10deg);
+
+  margin: 0 auto;
+  background-image: url(imgs/smoke.png);
+  background-size: 30 60;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+
+.roof {
+  position: relative;
+  top: 30%;
+  background-color: rgba(0, 0, 0, 0.3);
+	width: 300;
+	height: 150;
+  background-image: url(imgs/roof.jpg);
+  background-position: center;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  margin: 0 auto;
+
+}
+
+.chimney {
+  position: absolute;
+  width: 40;
+  height: 70;
+  bottom: 30;
+  left: 60;
+  background-image: url(imgs/chimney.png);
+  background-size: 50 90;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  
+}
+
+.wall {
+position: relative;
+top: 30%;
+background-color: rgba(0, 0, 0, 0.3);
+width: 260;
+height: 260;
+margin: 0 auto;
+background-image: url(imgs/wall.jpg);
+background-size: 260 260;
+}
+
+.window
+{
+  position:absolute;
+  bottom:140px;
+  left:25px;
+
+  width:130px;
+  height:90px;
+  background-image: url(imgs/window.png);
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-size: 130 80;
+  z-index: 3;
+}
+.inside
+{
+  background-color: teal;
+  position:absolute;
+  bottom:17px;
+  left:36px;
+  width:62px;
+  height:56px;
+  background-image: url(imgs/insideview.jpg);
+  background-size: cover;
+  z-index: 0;
+}
+
+.doorframe {
+  background-image: url(imgs/doorframe.jpg);
+  background-size: 90 149;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  position:absolute;
+  bottom:0px;
+  left:140px;
+  width:90px;
+  height:150px;
+  opacity: 1;
+}
+
+.backDoor
+{
+  background-color: #333;
+  background-image: url(imgs/entrence.jpg);
+  background-size: 100 149;
+  background-position: left;
+
+  position:absolute;
+  bottom:0px;
+  left:150px;
+  width:70px;
+  height:120px;
+  opacity: 1;
+}
+
+
+.door
+{
+  background-color: brown;
+  background-image: url(imgs/door.jpg);
+  background-size: 70 120;
+
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:70px;
+  height:120px;
+  z-index: 0;
+  transform-origin: left;
+  /*Speed of the Door animation*/
+  transition: all 1.5s ease-in-out;
+}
+
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-130deg);
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /*Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 5s steps(40, end),
+    blink-caret 0.9s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
 }
