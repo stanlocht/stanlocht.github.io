@@ -33,13 +33,48 @@ body {
     cursor: pointer;
 }
 
-.blokje {
-  background-color: rgba(255, 0, 0, 0.4);
+.gitaar {
+  background-color: rgba(255, 0, 0, 0.3);
+  position: relative;
+  width: 2%;
+  height: 19%;
+  top: 71%;
+  left: 4.3%;
+  cursor: pointer;
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  transform: rotate(-5deg);
+}
+
+.sputnik {
+  background-color: rgba(255, 0, 0, 0.3);
+  position: relative;
+  width: 7.5vh;
+  height: 7.5vh;
+  top: 17.3%;
+  left: 17.64%;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.resume {
+background-color: rgba(255, 0, 0, 0.3);
+position: relative;
+width: 7.3vh;
+height: 4.5vh;
+top: 34%;
+left: 39.5%;
+cursor: pointer;
+transform: rotate(0deg);
+}
+
+
+.zwemjas {
+  background-color: rgba(255, 0, 0, 0);
   position: relative;
   width: 10vh;
   height: 10vh;
-  top: 40%;
-  left: 10%;
+  top: 20vh;
+  left: 11%;
   cursor: pointer;
   border-style: solid;
   border-width: 0.1vh;
