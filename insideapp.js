@@ -21,12 +21,14 @@ function playAudio(url) {
 }
 
 
-$(document).ready(function () {
-    window.scrollTo(window.innerWidth / 1.5, 0);
-});
+// $(document).ready(function () {
+//     window.scrollTo(window.innerWidth / 1.5, 0);
+// });
 
 
-
+$( document ).ready(function() {
+    document.getElementById('center').scrollIntoView({ inline: 'center' });
+  });
 
 
 // function onYouTubeIframeAPIReady() {
